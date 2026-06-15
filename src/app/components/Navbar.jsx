@@ -30,7 +30,7 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "border-b border-gray-500 backdrop-blur-md shadow-sm"
+          ? "border-b border-stone-700/50 backdrop-blur-md shadow-sm"
           : "border-b border-transparent bg-transparent"
       }`}
     >
@@ -128,35 +128,35 @@ const Navbar = () => {
              <Link
                   href='#'
                 //   onClick={() => setIsOpen(false)}
-                  className="block text-xl font-semibold text-stone-100 duration-300 hover:text-yellow-600 transition-colors cursor-pointer"
+                  className="block text-xl font-semibold text-stone-100 duration-300 hover:text-yellow-600 transition-colors border-b border-gray-500 pb-3 cursor-pointer"
                 >
                   Home
                 </Link>
              <Link
                   href='#'
                 //   onClick={() => setIsOpen(false)}
-                  className="block text-xl font-semibold text-stone-100 duration-300 hover:text-yellow-600 transition-colors cursor-pointer"
+                  className="block text-xl font-semibold text-stone-100 duration-300 hover:text-yellow-600 transition-colors border-b border-gray-500 pb-3 cursor-pointer"
                 >
                   About
                 </Link>
              <Link
                   href='#'
                 //   onClick={() => setIsOpen(false)}
-                  className="block text-xl font-semibold text-stone-100 duration-300 hover:text-yellow-600 transition-colors cursor-pointer"
+                  className="block text-xl font-semibold text-stone-100 duration-300 hover:text-yellow-600 transition-colors border-b border-gray-500 pb-3 cursor-pointer"
                 >
                   Projects
                 </Link>
              <Link
                   href='#'
                 //   onClick={() => setIsOpen(false)}
-                  className="block text-xl font-semibold text-stone-100 duration-300 hover:text-yellow-600 transition-colors cursor-pointer"
+                  className="block text-xl font-semibold text-stone-100 duration-300 hover:text-yellow-600 transition-colors border-b border-gray-500 pb-3 cursor-pointer"
                 >
                   Skills
                 </Link>
              <Link
                   href='#'
                 //   onClick={() => setIsOpen(false)}
-                  className="block text-xl font-semibold text-stone-100 duration-300 hover:text-yellow-600 transition-colors cursor-pointer"
+                  className="block text-xl font-semibold text-stone-100 duration-300 hover:text-yellow-600 transition-colors border-b border-gray-500 pb-3 cursor-pointer"
                 >
                   Contact
                 </Link>
