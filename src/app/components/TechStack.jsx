@@ -1,5 +1,6 @@
 'use client'
 
+// all imports
 import { motion } from 'framer-motion'
 
 export default function TechStack() {

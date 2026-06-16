@@ -41,34 +41,46 @@ const Navbar = () => {
           <Logo />
         </div>
         {/* desktop nav */}
-        <div className="hidden lg:flex gap-4">
+        <div className="hidden lg:flex items-center gap-8 text-sm font-semibold tracking-wide">
           <Link
             href="#"
-            className=""
+            className="text-stone-600 dark:text-stone-400 hover:text-stone-950 dark:hover:text-white transition-all duration-300 relative group py-2"
           >
             Home
           </Link>
+
           <Link
-            href="#"
-            className=""
+            href="#about"
+            className="text-stone-600 dark:text-stone-400 hover:text-stone-950 dark:hover:text-white transition-all duration-300 relative group py-2"
           >
             About
           </Link>
+
           <Link
-            href="#"
-            className=""
+            href="#projects"
+            className="text-stone-600 dark:text-stone-400 hover:text-stone-950 dark:hover:text-white transition-all duration-300 relative group py-2"
           >
             Projects
           </Link>
+
           <Link
-            href="#"
-            className=""
+            href="#stack"
+            className="text-stone-600 dark:text-stone-400 hover:text-stone-950 dark:hover:text-white transition-all duration-300 relative group py-2"
           >
-            Skills
+            Stack
           </Link>
+
           <Link
-            href="#"
-            className=""
+            href="#services"
+            className="text-stone-600 dark:text-stone-400 hover:text-stone-950 dark:hover:text-white transition-all duration-300 relative group py-2"
+          >
+            Services
+          </Link>
+
+          {/* CTA */}
+          <Link
+            href="#contact"
+            className="ml-2 px-4 py-2 rounded border border-stone-200 dark:border-stone-800 text-stone-800 dark:text-stone-300 hover:text-yellow-600 dark:hover:text-yellow-600 hover:border-yellow-600/40 dark:hover:border-yellow-600/30 bg-stone-50/50 dark:bg-stone-950/20 transition-all duration-300"
           >
             Contact
           </Link>
@@ -83,33 +95,35 @@ const Navbar = () => {
             onClick={toggleNav}
             className={`
     relative block lg:hidden
-    w-10 h-10
-    cursor-pointer
-    z-50
-    rounded-full
-    transition-transform duration-500
-    ${openNav ? "hover:rotate-[90deg]" : ""}
+    w-10 h-10 rounded border
+    cursor-pointer z-50
+    bg-stone-50/50 dark:bg-stone-950/20
+    border-stone-200 dark:border-stone-800
+    hover:border-yellow-600/40 dark:hover:border-yellow-600/30
+    transition-all duration-500
+    ${openNav ? "hover:rotate-90" : ""}
   `}
+            aria-label="Toggle Menu"
           >
+            {/* top line */}
             <span
               className={`
       absolute left-1/2 top-1/2
-      h-[2px] w-7 md:w-8
+      h-[2px] w-5
       bg-yellow-600 rounded-full
       transition-all duration-500 ease-in-out
-      -translate-x-1/2 -translate-y-1/2
-      ${openNav ? "rotate-45" : "-translate-y-1.5"}
+      ${openNav ? "-translate-x-1/2 -translate-y-1/2 rotate-45" : "-translate-x-1/2 -translate-y-[5px]"}
     `}
             />
 
+            {/* bottom line */}
             <span
               className={`
       absolute left-1/2 top-1/2
-      h-[2px] w-7 md:w-8
+      h-[2px] w-5
       bg-yellow-600 rounded-full
       transition-all duration-500 ease-in-out
-      -translate-x-1/2 -translate-y-1/2
-      ${openNav ? "-rotate-45" : "translate-y-1.5"}
+      ${openNav ? "-translate-x-1/2 -translate-y-1/2 -rotate-45" : "-translate-x-1/2 translate-y-[3px]"}
     `}
             />
           </button>
@@ -125,42 +139,54 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-black overflow-hidden"
           >
-            <div className="px-6 py-8 space-y-6">
-             <Link
-                  href='#'
-                //   onClick={() => setIsOpen(false)}
-                  className="block text-xl font-semibold text-stone-100 duration-300 hover:text-yellow-600 transition-colors border-b border-gray-500 pb-3 cursor-pointer"
-                >
-                  Home
-                </Link>
-             <Link
-                  href='#'
-                //   onClick={() => setIsOpen(false)}
-                  className="block text-xl font-semibold text-stone-100 duration-300 hover:text-yellow-600 transition-colors border-b border-gray-500 pb-3 cursor-pointer"
-                >
-                  About
-                </Link>
-             <Link
-                  href='#'
-                //   onClick={() => setIsOpen(false)}
-                  className="block text-xl font-semibold text-stone-100 duration-300 hover:text-yellow-600 transition-colors border-b border-gray-500 pb-3 cursor-pointer"
-                >
-                  Projects
-                </Link>
-             <Link
-                  href='#'
-                //   onClick={() => setIsOpen(false)}
-                  className="block text-xl font-semibold text-stone-100 duration-300 hover:text-yellow-600 transition-colors border-b border-gray-500 pb-3 cursor-pointer"
-                >
-                  Skills
-                </Link>
-             <Link
-                  href='#'
-                //   onClick={() => setIsOpen(false)}
-                  className="block text-xl font-semibold text-stone-100 duration-300 hover:text-yellow-600 transition-colors border-b border-gray-500 pb-3 cursor-pointer"
-                >
-                  Contact
-                </Link>
+            <div className="px-6 py-8 space-y-6 bg-white dark:bg-black transition-colors duration-300">
+              <Link
+                href="#"
+                onClick={() => setOpenNav(false)}
+                className="block text-xl font-bold tracking-tight text-stone-900 dark:text-stone-100 hover:text-yellow-600 dark:hover:text-yellow-600 transition-colors duration-300 border-b border-stone-100 dark:border-stone-900 pb-4"
+              >
+                Home
+              </Link>
+
+              <Link
+                href="#about"
+                onClick={() => setOpenNav(false)}
+                className="block text-xl font-bold tracking-tight text-stone-900 dark:text-stone-100 hover:text-yellow-600 dark:hover:text-yellow-600 transition-colors duration-300 border-b border-stone-100 dark:border-stone-900 pb-4"
+              >
+                About
+              </Link>
+
+              <Link
+                href="#projects"
+                onClick={() => setOpenNav(false)}
+                className="block text-xl font-bold tracking-tight text-stone-900 dark:text-stone-100 hover:text-yellow-600 dark:hover:text-yellow-600 transition-colors duration-300 border-b border-stone-100 dark:border-stone-900 pb-4"
+              >
+                Projects
+              </Link>
+
+              <Link
+                href="#stack"
+                onClick={() => setOpenNav(false)}
+                className="block text-xl font-bold tracking-tight text-stone-900 dark:text-stone-100 hover:text-yellow-600 dark:hover:text-yellow-600 transition-colors duration-300 border-b border-stone-100 dark:border-stone-900 pb-4"
+              >
+                Stack
+              </Link>
+
+              <Link
+                href="#services"
+                onClick={() => setOpenNav(false)}
+                className="block text-xl font-bold tracking-tight text-stone-900 dark:text-stone-100 hover:text-yellow-600 dark:hover:text-yellow-600 transition-colors duration-300 border-b border-stone-100 dark:border-stone-900 pb-4"
+              >
+                Services
+              </Link>
+
+              <Link
+                href="#contact"
+                onClick={() => setOpenNav(false)}
+                className="block text-xl font-bold tracking-tight text-stone-900 dark:text-stone-100 hover:text-yellow-600 dark:hover:text-yellow-600 transition-colors duration-300 border-b border-stone-100 dark:border-stone-900 pb-4"
+              >
+                Contact
+              </Link>
             </div>
           </motion.div>
         )}

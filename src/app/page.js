@@ -16,7 +16,7 @@ const page = () => {
       <Projects />
       <TechStack />
       <Services />
-      <Contact />
+      <Contact /> 
     </div>
   );
 };

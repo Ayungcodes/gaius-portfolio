@@ -101,6 +101,7 @@ export default function Projects() {
                     </a>
                     <a
                       href={project.githubLink}
+                      target="_blank"
                       className="inline-flex items-center gap-1.5 text-stone-500 hover:text-stone-950 dark:text-stone-500 dark:hover:text-stone-200 transition-colors duration-200"
                     >
                       Codebase
