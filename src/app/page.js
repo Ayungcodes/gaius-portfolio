@@ -5,6 +5,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import TechStack from "./components/TechStack";
 import Services from "./components/Services";
+import Contact from "./components/Contact";
 
 const page = () => {
   return (
@@ -15,6 +16,7 @@ const page = () => {
       <Projects />
       <TechStack />
       <Services />
+      <Contact />
     </div>
   );
 };

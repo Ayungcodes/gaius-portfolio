@@ -91,6 +91,7 @@ export default function Projects() {
                   <div className="flex items-center gap-6 pt-4 text-sm font-semibold tracking-wide">
                     <a
                       href={project.liveLink}
+                      target="_blank"
                       className="inline-flex items-center gap-1.5 text-stone-900 dark:text-stone-100 hover:text-yellow-600 dark:hover:text-yellow-600 transition-colors duration-200 group"
                     >
                       Live Project

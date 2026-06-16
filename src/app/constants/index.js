@@ -23,7 +23,7 @@ export const projectsArr = [
   },
   {
     id: "03",
-    photo: "/images/dashboard.png",
+    photo: "/images/freelancer-dash.png",
     title: "Freelancer Dashboard",
     category: "Full-Stack Application",
     description:
@@ -34,18 +34,7 @@ export const projectsArr = [
   },
   {
     id: "04",
-    photo: "/images/savora.png",
-    title: "Savora",
-    category: "Front-End Application",
-    description:
-      "Crafted in React and Tailwind, this piece combines minimalist design with a luxurious atmosphere and fluid motion. Every element moves with purpose — a perfect balance between art, code, and modern digital craftsmanship.",
-    tags: ["React.js", "Tailwind CSS"],
-    liveLink: "https://savora-restaurant.vercel.app/",
-    githubLink: "#",
-  },
-  {
-    id: "05",
-    photo: "/images/timcreative.png",
+    photo: "/images/tim.png",
     title: "Tim Creative",
     category: "Front-End Application",
     description:
@@ -55,8 +44,8 @@ export const projectsArr = [
     githubLink: "#",
   },
   {
-    id: "06",
-    photo: "/images/luxuryWatch.png",
+    id: "05",
+    photo: "/images/watch.png",
     title: "Luxury Watch E-commerce Site",
     category: "Front-End Application",
     description:
@@ -67,7 +56,7 @@ export const projectsArr = [
   },
 
   {
-    id: "07",
+    id: "06",
     photo: "/images/Screenshot (316).png",
     title: "NeuraFlow",
     category: "Front-End Application",

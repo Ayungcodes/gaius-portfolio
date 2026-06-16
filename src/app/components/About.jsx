@@ -97,16 +97,45 @@ const About = () => {
             <div className="absolute inset-0 border border-yellow-600 rounded-md translate-x-3 translate-y-3 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1 pointer-events-none" />
 
             {/* photo container */}
-            <div className="relative aspect-[4/5] w-full rounded-md bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 overflow-hidden flex items-center justify-center shadow-lg transition-colors duration-300">
-              <Image 
-                src="/images/my-photo.jpg" 
-                alt="Gaius Emmanuel Portrait" 
+            <div className="relative aspect-[4/5] w-full rounded-md bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 overflow-hidden flex items-center justify-center shadow-lg transition-colors duration-300 group">
+              <Image
+                src="/images/my-photo.jpg"
+                alt="Gaius Emmanuel Portrait"
                 fill
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                className="object-cover grayscale hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-102"
                 sizes="(max-w-7xl) 33vw, 100vw"
                 priority
-              /> 
-             
+              />
+
+              <div className="absolute bottom-3 left-3 right-3 backdrop-blur-md bg-white/70 dark:bg-black/70 border border-stone-200/50 dark:border-stone-800/50 group-hover:border-yellow-600/40 rounded p-4 grid grid-cols-3 gap-2 text-center transition-all duration-300 shadow-xl z-10">
+                <div className="flex flex-col">
+                  <span className="text-xl sm:text-2xl font-black text-stone-950 dark:text-white group-hover:text-yellow-600 dark:group-hover:text-yellow-600 transition-colors duration-300 tracking-tight">
+                    3+
+                  </span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400 mt-0.5">
+                    Years
+                  </span>
+                </div>
+
+                {/* center divider */}
+                <div className="flex flex-col border-x border-stone-200/60 dark:border-stone-800/60 px-2">
+                  <span className="text-xl sm:text-2xl font-black text-stone-950 dark:text-white group-hover:text-yellow-600 dark:group-hover:text-yellow-600 transition-colors duration-300 tracking-tight">
+                    9
+                  </span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400 mt-0.5">
+                    Core Tools
+                  </span>
+                </div>
+
+                <div className="flex flex-col">
+                  <span className="text-xl sm:text-2xl font-black text-stone-950 dark:text-white group-hover:text-yellow-600 dark:group-hover:text-yellow-600 transition-colors duration-300 tracking-tight">
+                    20+
+                  </span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400 mt-0.5">
+                    Projects
+                  </span>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>

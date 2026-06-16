@@ -4,6 +4,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
+import Logo from "./Logo";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Navbar = () => {
@@ -37,7 +38,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* logo */}
         <div className="text-xl font-bold">
-          <Link href="#">Gaius.dev</Link>
+          <Logo />
         </div>
         {/* desktop nav */}
         <div className="hidden lg:flex gap-4">
