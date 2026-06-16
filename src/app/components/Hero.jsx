@@ -24,7 +24,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-[115vh] md:min-h-[92vh] lg:min-h-[105vh] flex flex-col justify-center items-center px-6 relative overflow-hidden bg-white text-stone-900 dark:bg-black dark:text-stone-200">
+    <section id="home" className="min-h-[115vh] md:min-h-[92vh] lg:min-h-[105vh] flex flex-col justify-center items-center px-6 relative overflow-hidden bg-white text-stone-900 dark:bg-black dark:text-stone-200">
       {/* bg accent */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-yellow-600/5 dark:bg-yellow-600/[0.02] blur-[120px] rounded-full pointer-events-none" />
 
