@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+*,
+*::before,
+*::after,
+html,
+body,
+a,
+button,
+input,
+select,
+textarea,
+[role="button"],
+img {
+  cursor: none !important;
+}
+
 html,
 body {
   width: 100%;

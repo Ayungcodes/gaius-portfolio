@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 
 const page = () => {
   return (
-    <div>
+    <div className="selection:bg-zinc-300 dark:selection:bg-zinc-700 selection:text-stone-900 dark:selection:text-stone-200">
       <Navbar />
       <Hero />
       <About />
