@@ -126,13 +126,6 @@ export default function Contact() {
           </div>
 
         </motion.div>
-
-        {/* minimal footer */}
-        <div className="mt-32 pt-8 border-t border-stone-100 dark:border-stone-900 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-mono text-stone-400 dark:text-stone-600">
-          <p>© 2026 Gaius Emmanuel. All structures built with intent.</p>
-          <p>Next.js + Tailwind CSS + Motion</p>
-        </div>
-
       </div>
     </section>
   )
