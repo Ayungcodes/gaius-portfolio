@@ -12,7 +12,7 @@ export const projectsArr = [
   },
   {
     id: "02",
-    photo: "/images/Untitled design (2).png",
+    photo: "/images/movue.png",
     title: "Movue",
     category: "Web Application / Integration",
     description:
