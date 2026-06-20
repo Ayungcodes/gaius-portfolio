@@ -27,8 +27,8 @@ export const projectsArr = [
     title: "Freelancer Dashboard",
     category: "Full-Stack Application",
     description:
-      "A custom-built dashboard designed for freelancers to manage clients, tasks, and project performance in one place. It includes real-time client tracking, task management, search and filtering, status monitoring, and clean data summaries for quick insights. Currently improving the UI, adding local storage persistence, and expanding analytics features to make it more powerful and efficient.",
-    tags: ["React.js", "Express.js", "Tailwind CSS"],
+      "A custom-built dashboard designed to centralize client management, tasks, and project performance analytics for independent workflows. Features an intuitive frontend architecture equipped with real-time client tracking states, robust multi-parameter search filtering, and clean data visualization layouts for rapid insights. Currently migrating the application into a full-stack production ecosystem, integrating a Node.js/Express backend and Supabase infrastructure to transition from client-side state to secure, persistent relational databases and user authentication.",
+    tags: ["React.js", "Tailwind CSS"],
     liveLink: "https://freelancer-dashboard-alpha.vercel.app/",
     githubLink: "https://github.com/Ayungcodes/freelancer-dashboard",
   },
