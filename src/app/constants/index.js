@@ -1,14 +1,14 @@
 export const projectsArr = [
   {
     id: "01",
-    photo: "/images/devlog.png",
-    title: "DevLog",
+    photo: "/images/freelancers-desk.png",
+    title: "Freelancer Dashboard",
     category: "Full-Stack Application",
     description:
-      "DevLog is a fullstack developer journaling app built with React, Tailwind, and Express. It showcases API design, monorepo structure, and real-world deployment using Render and Vercel — part of my transition from frontend to fullstack development.",
-    tags: ["React.js", "Express.js", "Tailwind CSS"],
-    liveLink: "https://devlog-drab-psi.vercel.app/",
-    githubLink: "https://github.com/Ayungcodes/devlog-fullstack",
+      "A full-stack freelancer management dashboard built with Next.js and Supabase. Features secure multi-user authentication with row-level security, client and project management with dynamic priority tracking, task management across projects, and an earnings analytics dashboard with monthly revenue charts. Built with a production-grade architecture — persistent PostgreSQL database, protected API routes, and responsive design with a sidebar on desktop and top navigation on mobile. Live and deployed on Vercel.",
+    tags: ["Next.js", "Supabase", "Tailwind CSS", "PostgreSQL", "Recharts"],
+    liveLink: "https://freelancers-desk.vercel.app/",
+    githubLink: "https://github.com/Ayungcodes/FreelancerDesk",
   },
   {
     id: "02",
@@ -23,14 +23,14 @@ export const projectsArr = [
   },
   {
     id: "03",
-    photo: "/images/freelancer-dash.png",
-    title: "Freelancer Dashboard",
+    photo: "/images/devlog.png",
+    title: "DevLog",
     category: "Full-Stack Application",
     description:
-      "A custom-built dashboard designed to centralize client management, tasks, and project performance analytics for independent workflows. Features an intuitive frontend architecture equipped with real-time client tracking states, robust multi-parameter search filtering, and clean data visualization layouts for rapid insights. Currently migrating the application into a full-stack production ecosystem, integrating a Node.js/Express backend and Supabase infrastructure to transition from client-side state to secure, persistent relational databases and user authentication.",
-    tags: ["React.js", "Tailwind CSS"],
-    liveLink: "https://freelancer-dashboard-alpha.vercel.app/",
-    githubLink: "https://github.com/Ayungcodes/freelancer-dashboard",
+      "DevLog is a fullstack developer journaling app built with React, Tailwind, and Express. It showcases API design, monorepo structure, and real-world deployment using Render and Vercel — part of my transition from frontend to fullstack development.",
+    tags: ["React.js", "Express.js", "Tailwind CSS"],
+    liveLink: "https://devlog-drab-psi.vercel.app/",
+    githubLink: "https://github.com/Ayungcodes/devlog-fullstack",
   },
   {
     id: "04",
