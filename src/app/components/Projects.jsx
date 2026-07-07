@@ -6,7 +6,6 @@ import Image from "next/image";
 import { projectsArr } from "../constants";
 
 export default function Projects() {
-
   const projectVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
