@@ -164,81 +164,66 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-black overflow-hidden"
+            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="md:hidden bg-white dark:bg-black overflow-hidden"
           >
-            <div className="px-6 py-8 space-y-6 bg-white dark:bg-black transition-colors duration-300">
-              <Link
-                href="#"
-  onClick={(e) => {
-    setOpenNav(false)
-    e.preventDefault();
-    lenis?.scrollTo('#home');
-  }}
-                className="block text-xl font-bold tracking-tight text-stone-900 dark:text-stone-100 hover:text-yellow-600 dark:hover:text-yellow-600 transition-colors duration-300 border-b border-stone-100 dark:border-stone-900 pb-4"
-              >
-                Home
-              </Link>
-
-              <Link
-                href="#about"
-                onClick={(e) => {
-                  setOpenNav(false);
-                  e.preventDefault();
-                  lenis?.scrollTo('#about');
-                }}
-                className="block text-xl font-bold tracking-tight text-stone-900 dark:text-stone-100 hover:text-yellow-600 dark:hover:text-yellow-600 transition-colors duration-300 border-b border-stone-100 dark:border-stone-900 pb-4"
-              >
-                About
-              </Link>
-
-              <Link
-                href="#projects"
-                onClick={(e) => {
-                  setOpenNav(false);
-                  e.preventDefault();
-                  lenis?.scrollTo('#projects');
-                }}
-                className="block text-xl font-bold tracking-tight text-stone-900 dark:text-stone-100 hover:text-yellow-600 dark:hover:text-yellow-600 transition-colors duration-300 border-b border-stone-100 dark:border-stone-900 pb-4"
-              >
-                Projects
-              </Link>
-
-              <Link
-                href="#stack"
-                onClick={(e) => {
-                  setOpenNav(false);
-                  e.preventDefault();
-                  lenis?.scrollTo('#stack');
-                }}
-                className="block text-xl font-bold tracking-tight text-stone-900 dark:text-stone-100 hover:text-yellow-600 dark:hover:text-yellow-600 transition-colors duration-300 border-b border-stone-100 dark:border-stone-900 pb-4"
-              >
-                Stack
-              </Link>
-
-              <Link
-                href="#services"
-                onClick={(e) => {
-                  setOpenNav(false);
-                  e.preventDefault();
-                  lenis?.scrollTo('#services');
-                }}
-                className="block text-xl font-bold tracking-tight text-stone-900 dark:text-stone-100 hover:text-yellow-600 dark:hover:text-yellow-600 transition-colors duration-300 border-b border-stone-100 dark:border-stone-900 pb-4"
-              >
-                Services
-              </Link>
-
-              <Link
-                href="#contact"
-                onClick={(e) => {
-                  setOpenNav(false);
-                  e.preventDefault();
-                  lenis?.scrollTo('#contact');
-                }}
-                className="block text-xl font-bold tracking-tight text-stone-900 dark:text-stone-100 hover:text-yellow-600 dark:hover:text-yellow-600 transition-colors duration-300 border-b border-stone-100 dark:border-stone-900 pb-4"
-              >
-                Contact
-              </Link>
-            </div>
+            <motion.div
+              variants={{
+                hidden: {},
+                show: {
+                  transition: { staggerChildren: 0.06, delayChildren: 0.08 },
+                },
+              }}
+              initial="hidden"
+              animate="show"
+              className="px-6 py-10"
+            >
+              {[
+                { label: "Home", href: "#home" },
+                { label: "About", href: "#about" },
+                { label: "Projects", href: "#projects" },
+                { label: "Stack", href: "#stack" },
+                { label: "Services", href: "#services" },
+                { label: "Contact", href: "#contact" },
+              ].map((item, i) => (
+                <motion.div
+                  key={item.href}
+                  variants={{
+                    hidden: { opacity: 0, y: 16 },
+                    show: { opacity: 1, y: 0 },
+                  }}
+                  transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                  className="group border-b border-stone-100 dark:border-stone-900"
+                >
+                  <Link
+                    href={item.href}
+                    onClick={(e) => {
+                      setOpenNav(false);
+                      e.preventDefault();
+                      lenis?.scrollTo(item.href);
+                    }}
+                    className="flex items-baseline justify-between py-5"
+                  >
+                    <span className="flex items-baseline gap-4">
+                      <span className="text-xs font-mono text-stone-400 dark:text-stone-600 tabular-nums">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <span className="text-2xl font-bold tracking-tight text-stone-900 dark:text-stone-100 transition-colors duration-300 group-hover:text-yellow-600 dark:group-hover:text-yellow-600">
+                        {item.label}
+                      </span>
+                    </span>
+                    <span className="relative w-6 h-6 flex items-center justify-center overflow-hidden">
+                      <span className="absolute inset-0 flex items-center justify-center text-stone-300 dark:text-stone-700 transition-transform duration-300 group-hover:-translate-y-6">
+                        →
+                      </span>
+                      <span className="absolute inset-0 flex items-center justify-center text-yellow-600 translate-y-6 transition-transform duration-300 group-hover:translate-y-0">
+                        →
+                      </span>
+                    </span>
+                  </Link>
+                </motion.div>
+              ))}
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
