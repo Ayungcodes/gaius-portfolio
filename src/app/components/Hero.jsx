@@ -2,6 +2,9 @@
 
 // all imports
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useLenis } from "lenis/react";
 
 export default function Hero() {
   const containerVariants = {
@@ -23,8 +26,22 @@ export default function Hero() {
     },
   };
 
+  const lenis = useLenis();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section id="home" className="min-h-[115vh] md:min-h-[92vh] lg:min-h-[105vh] flex flex-col justify-center items-center px-6 relative overflow-hidden bg-white text-stone-900 dark:bg-black dark:text-stone-200">
+    <section
+      id="home"
+      className="min-h-[115vh] md:min-h-[92vh] lg:min-h-[105vh] flex flex-col justify-center items-center px-6 relative overflow-hidden bg-white text-stone-900 dark:bg-black dark:text-stone-200"
+    >
       {/* bg accent */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-yellow-600/5 dark:bg-yellow-600/[0.02] blur-[120px] rounded-full pointer-events-none" />
 
@@ -69,18 +86,26 @@ export default function Hero() {
           variants={itemVariants}
           className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <a
-            href="#projects"
+          <Link
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              lenis?.scrollTo("#projects");
+            }}
             className="w-full sm:w-auto px-8 py-3 bg-stone-900 text-white dark:bg-stone-200 dark:text-black font-semibold rounded-md hover:bg-yellow-600 dark:hover:bg-yellow-600 dark:hover:text-white transition-colors duration-200 text-center shadow-md shadow-stone-900/10 dark:shadow-none"
           >
             View My Work
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              lenis?.scrollTo("#contact");
+            }}
             className="w-full sm:w-auto px-8 py-3 border border-stone-200 dark:border-stone-800 font-semibold rounded-md bg-transparent hover:bg-stone-50 dark:hover:bg-stone-950 hover:border-yellow-600 transition-colors duration-200 text-center"
           >
             Let&apos;s Talk
-          </a>
+          </Link>
           <a
             href="/001-Gaius-Emmanuel.pdf"
             target="_blank"
