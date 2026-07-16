@@ -120,7 +120,7 @@ const About = () => {
                 {/* center divider */}
                 <div className="flex flex-col border-x border-stone-200/60 dark:border-stone-800/60 px-2">
                   <span className="text-xl sm:text-2xl font-black text-stone-950 dark:text-white group-hover:text-yellow-600 dark:group-hover:text-yellow-600 transition-colors duration-300 tracking-tight">
-                    9
+                    10
                   </span>
                   <span className="text-[10px] font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400 mt-0.5">
                     Core Tools

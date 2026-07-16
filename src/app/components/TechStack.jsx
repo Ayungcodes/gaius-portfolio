@@ -10,6 +10,7 @@ export default function TechStack() {
     { name: 'Next.js', type: 'Full-Stack Framework' },
     { name: 'Node.js', type: 'Runtime Environment' },
     { name: 'Express.js', type: 'Backend Framework' },
+    { name: 'PostgreSQL', type: 'Database' },
     { name: 'TailwindCSS', type: 'Styling Engine' },
   ]
 
