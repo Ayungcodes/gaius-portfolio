@@ -13,8 +13,8 @@ export default function Contact() {
   const socialLinks = [
     {
       name: "GitHub",
-      handle: "@Ayungcodes",
-      url: "https://github.com/Ayungcodes",
+      handle: "@Gaius-codes",
+      url: "https://github.com/Gaius-codes",
       icon: faGithub,
     },
     {
@@ -25,16 +25,16 @@ export default function Contact() {
     },
     {
       name: "X / Twitter",
-      handle: "@_Gaius_Emmanuel",
-      url: "https://x.com/_Gaius_Emmanuel",
+      handle: "@Gaius_codes",
+      url: "https://x.com/Gaius_codes",
       icon: faXTwitter,
     },
-    {
-      name: "Instagram",
-      handle: "@ayungclassic",
-      url: "https://www.instagram.com/ayungclassic/",
-      icon: faInstagram,
-    },
+    // {
+    //   name: "Instagram",
+    //   handle: "@ayungclassic",
+    //   url: "https://www.instagram.com/ayungclassic/",
+    //   icon: faInstagram,
+    // },
   ];
 
   const containerVariants = {
